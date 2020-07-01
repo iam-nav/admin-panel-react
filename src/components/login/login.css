@@ -1,0 +1,80 @@
+
+.content{
+    position: relative;
+    background-color: #2d3031;
+    max-width: 300px;
+    height: 400px;
+    color: white;
+    margin: 100px auto auto auto;
+    border-radius: 15px;
+    font-family: 'Merriweather', serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.header{
+text-align: center;
+ padding-top: 50px;
+ color: white;
+}
+.input1,.input2{
+    color: white;
+    font-size: medium;
+    width: 200px;
+    text-align: center;
+    background-color: transparent;
+    border-color: white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-top: 40px;
+}
+
+input:focus{
+    outline: none;
+    border-color: #469cbb;
+    text-align: left;
+    transition: 0.9s;
+}
+.login-card{
+    text-align: center;
+}
+
+.btn{
+    font-family: 'Merriweather', serif;
+    margin-top: 50px;
+    width: 200px;
+    padding: 7px;
+    border: none;
+    color: #469cbb;
+    outline: 1.5px solid #469cbb;
+    background: transparent
+}
+.btn:hover{
+    color :#469cbb;
+    cursor: pointer;
+    box-shadow: 0 0 20px 10px hsla(204, 70%, 53%, 0.5);
+}
+.label{
+    color: white;
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    font-size: small;
+}
+.User_label{
+    color:white;
+    position: absolute;
+    top: 35.5%;
+    pointer-events: none;
+    font-size: small;
+}
+
+.input2:focus ~ label{
+    transition: ease-in 0.3s;
+    font-size: x-small;
+    top:45%;
+}
+.input1:focus ~ .User_label{
+    transition: ease-in 0.3s;
+    font-size: x-small;
+    top:33%;
+}
