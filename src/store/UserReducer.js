@@ -1,10 +1,11 @@
-import {LOGIN_SUCCESS,LOGIN_FAILED} from './Actiontypes'
+import {LOGIN_SUCCESS,LOGIN_FAILED,CURRENT_PAGE} from './Actiontypes'
 
 
 const initialState = {
     error:'',
     UserLoged:false,
-    Users:[]
+    Users:[],
+    currentPage:1
 }
 
 
@@ -21,6 +22,11 @@ export const UserReducer = (state=initialState,action)=>{
                 ...state,
                UserLoged:true,
                error:''
+            }
+            case CURRENT_PAGE:
+            return{
+                ...state,
+                Currentpage:action.currentPage
             }     
         default: return state
     }

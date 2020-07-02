@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from  './components/login/login'
 import  {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import Service from './components/admin/services/service'
 import Layout  from './components/admin/layout'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
               <Switch >
                   <Route path="/" exact component={Login} />:
                   <Route path="/home"  component={Layout} />
+                  <Route Path="/home-service" component={Service}/>
               </Switch>
                 {/* <Protected exact path="/profile" component={Profile}></Protected> */}
           </Router>

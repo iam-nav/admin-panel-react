@@ -1,3 +1,4 @@
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
 export const LOGIN_FAILED = 'LOGIN_FAILED'
 export const USER_DATA ='USER_DATA'
+export const CURRENT_PAGE='CURRENT_PAGE'

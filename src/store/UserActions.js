@@ -1,4 +1,4 @@
-import {LOGIN_FAILED,LOGIN_SUCCESS,USER_DATA} from './Actiontypes'
+import {LOGIN_FAILED,LOGIN_SUCCESS,USER_DATA,CURRENT_PAGE} from './Actiontypes'
 import ActionButton from 'antd/lib/modal/ActionButton'
 
 
@@ -23,6 +23,13 @@ export const userData = (users)=>{
         error:'',
         UserLoged:true,
         users
+    }
+}
+
+export const CurrentPage = (currentPage)=>{
+    return {
+        type:CURRENT_PAGE,
+        currentPage
     }
 }
 
