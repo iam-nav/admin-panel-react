@@ -1,4 +1,5 @@
 
+
 .content{
     position: relative;
     background-color: #2d3031;
@@ -71,10 +72,14 @@ input:focus{
 .input2:focus ~ label{
     transition: ease-in 0.3s;
     font-size: x-small;
-    top:45%;
+    top:48%;
 }
 .input1:focus ~ .User_label{
     transition: ease-in 0.3s;
     font-size: x-small;
     top:33%;
+}
+.input1:invalid ~ .User_label{
+    font-size: x-small;
+    top: 33%;
 }

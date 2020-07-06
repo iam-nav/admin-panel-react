@@ -41,6 +41,7 @@ class SiderDemo extends React.Component {
   handleMenuClick=(e)=> {
     if(e.key==='2'){
       this.props.SwitchPage(2)
+      console.log(this.props.CurrentPage)
       // window.location = '/home-service'
     }
     // message.info('Click on menu item.');

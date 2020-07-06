@@ -5,7 +5,9 @@ const initialState = {
     error:'',
     UserLoged:false,
     Users:[],
+    token:'',
     currentPage:1
+
 }
 
 
@@ -20,7 +22,7 @@ export const UserReducer = (state=initialState,action)=>{
         case LOGIN_SUCCESS:
             return{
                 ...state,
-               UserLoged:true,
+               token:action.token,
                error:''
             }
             case CURRENT_PAGE:

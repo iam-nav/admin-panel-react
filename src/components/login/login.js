@@ -10,7 +10,8 @@ function Login(props) {
     
 const sendData = ()=>{
     props.SendCredentials(email,password)
-    }
+    console.log(props.token )
+}
 
     return (
         <div className="content">
@@ -31,6 +32,7 @@ const sendData = ()=>{
 const mapStateToProp = state =>{
     return{
        error:state.error,
+       token:state.token,
        UserLoged:state.UserLoged
     }
 }

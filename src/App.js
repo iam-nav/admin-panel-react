@@ -3,6 +3,7 @@ import Login from  './components/login/login'
 import  {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 import Service from './components/admin/services/service'
 import Layout  from './components/admin/layout'
+import Spinner from './components/spinner/spinner'
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
 
           <Router>
               <Switch >
-                  <Route path="/" exact component={Login} />:
+                  <Route path="/"  component={Login} />:
+                  <Route path="/login"  component={Login} ></Route>
                   <Route path="/home"  component={Layout} />
                   <Route Path="/home-service" component={Service}/>
               </Switch>
