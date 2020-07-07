@@ -1,6 +1,7 @@
 import {LOGIN_FAILED,LOGIN_SUCCESS,USER_DATA,CURRENT_PAGE} from './Actiontypes'
 import ActionButton from 'antd/lib/modal/ActionButton'
 import axios from 'axios'
+import {validation} from '../components/validation/validation'
 
 
 
@@ -38,40 +39,25 @@ export const CurrentPage = (currentPage)=>{
 
 export const sendUserData =(email,password)=>{
     return (dispatch)=>{ 
+        const Error = validation(email,password)
+        Error?dispatch(Loginfailed(Error)):
           axios({
             method: 'post',
             url: "http://localhost:8000/api/login",
             params: {
-                "email": "random@example.com",
-                "password": "123456789"
+                "email": email,
+                "password": password
               }
         })
         .then(res=>{
             localStorage.setItem('key',res.data.success.access_token)
             dispatch(LogedSuccess(res.data.success.access_token))
-        //   localStorage.setItem('key',res.data.token)
-        //   window.location = '/profile'
+             window.location = '/home'
         }).catch((e)=>{
-            console.log(e)
+            dispatch(Loginfailed('Account Not found'))
         })
-        // .catch((e=>{
-        //     dispatch(Loginfailed(e.response.data.error))
-        // }))
     }
 }
-
-
-
-
-// axios({
-//     method: 'post',
-//     url: 
-//    .then(res=>{
-// console.log(res.data)
-//     //   localStorage.setItem('key',res.data.token)
-// //   window.location = '/profile'
-// })
-
 
 
 

@@ -3,7 +3,9 @@ import Login from  './components/login/login'
 import  {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 import Service from './components/admin/services/service'
 import Layout  from './components/admin/layout'
-import Spinner from './components/spinner/spinner'
+import Protected from './components/protected_route/protected'
+import Alerts from './components/validation/Alert'
+// import Spinner from './components/spinner/spinner'
 
 function App() {
   return (
@@ -11,12 +13,11 @@ function App() {
 
           <Router>
               <Switch >
-                  <Route path="/"  component={Login} />:
-                  <Route path="/login"  component={Login} ></Route>
-                  <Route path="/home"  component={Layout} />
-                  <Route Path="/home-service" component={Service}/>
+                  <Route path="/" exact component={Login} />:
+                  {/* <Route Path="/home-service" component={Service}/> */}
+                  <Protected exact path="/home" component={Layout}></Protected>
               </Switch>
-                {/* <Protected exact path="/profile" component={Profile}></Protected> */}
+   
           </Router>
 
 
